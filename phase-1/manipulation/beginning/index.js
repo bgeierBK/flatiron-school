@@ -43,4 +43,24 @@ Challenges
 // 2. Replace the <strong> element with a newly created one.
 
 
+function displayList(name, array){
+    let header = document.createElement("h1");
+    header.textContent = name;
+    document.querySelector("#dates").append(header);
 
+  
+    for (let i= 0; i <array.length; i++){
+        let list = document.createElement("li");
+        list.textContent = array[i];
+        document.querySelector("#dates").append(list);
+    }
+
+    
+}
+
+displayList("Capitals", ["Ovechkin", "Wilson", "Oshie", "Carlson"])
+
+const div1 = document.querySelector("strong");
+const div2 = document.createElement("div2");
+div2.innerHTML= "Spencer Carberry";
+div1.parentNode.replaceChild(div2, div1)
