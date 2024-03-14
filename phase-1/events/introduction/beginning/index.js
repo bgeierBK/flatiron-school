@@ -10,7 +10,7 @@ Objectives
 2. Handle a form submission by reading its input.
 
 Takeaways
-- "click" and "submit" events
+- "click" and "submit" "mouseover" events
 - `event.preventDefault()`
 - `[form].[input].value`
 
@@ -18,7 +18,29 @@ Takeaways
 
 // ~ the "click" event
 
+document.getElementById("today").addEventListener("click", event => {
+    
+console.log("you done clicked!")
+})
+
+
+
+
 // ~ the "submit" event
+
+document.querySelector("form").addEventListener("submit", event => {
+    event.preventDefault();
+    console.log("the form was submitted!");
+    console.log(document.querySelector("form").date.value)
+})
 
 // ~ challenges
 // 1. Add some non-click, non-submit event listener to the page. It can trigger whatever you wish!
+
+document.getElementById("tomorrow").addEventListener("mouseenter", event => {
+    document.getElementById("tomorrow").innerHTML="wha-wha-what!?"
+    })
+
+document.getElementById("tomorrow").addEventListener("mouseout", event => {
+    document.getElementById("tomorrow").innerHTML="Tomorrow"
+    })
